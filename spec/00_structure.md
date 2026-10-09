@@ -2,9 +2,9 @@
 
 Key design decisions, behaviour, and requirements. Implementation details stay in the code — a spec links to the source instead of restating it.
 
-One folder per spec. The spec tree mirrors the package paths — `spec/dashboard/` for `dashboard`, `spec/rsvp/` for `rsvp`.
+One folder per spec. The spec tree mirrors the package paths.
 
-- Place a spec by where the user sees the behaviour, not where the code lives. A flow built in shared code but shown on the Dashboard goes under `spec/dashboard/`.
+- Place a spec by where the user sees the behaviour, not where the code lives.
 - A flow on both apps gets one spec per app, under the same `NN_kebab-name/` in each. Each describes only its own app and links to its counterpart.
 - `spec/shared/` holds rules with no UI of their own.
 
@@ -22,7 +22,7 @@ Two files per spec
 ## Procedures
 
 - Add or write a spec: `spec/writing-specs.md`.
-- Local and production database: `spec/db.md`.
+- Dev and production database: `spec/db.md`.
 - Prod deployment: `spec/deployment.md`.
 
 ## Specs
@@ -34,5 +34,3 @@ Before the first edit in a package, read its `00_context.md` — one for every p
 | package                        | scope                               |
 | ------------------------------ | ----------------------------------- |
 | `spec/shared/00_context.md`    | terms used by more than one package |
-| `spec/dashboard/00_context.md` | the Dashboard                       |
-| `spec/rsvp/00_context.md`      | the public RSVP site                |

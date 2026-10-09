@@ -17,7 +17,7 @@ Where a spec goes and its two files: `spec/00_structure.md`.
 
 ## Referencing spec/shared/
 
-A rule in `spec/shared/` holds for every app. A `spec/rsvp/` or `spec/dashboard/` spec names that path rather than restating it.
+A rule in `spec/shared/` holds for every app. Name that path rather than restating it.
 Before writing a rule, check `spec/shared/` for it.
 When a spec names another markdown file, write the full path from the repo root, such as `spec/shared/00_context.md`.
 Never write a bare filename.
