@@ -15,7 +15,7 @@ Use functional programming. Do not use object-oriented programming.
 ### Components
 
 - It page should have a id selector
-- Each Page component class should have format: {page}-{component}-{subcomponent}-...
+- Each Page component outermost tag class should have format: {page}-{component}-{subcomponent}-...
 - Put constants before the component. For example: `const MIN_TRANSFER_AMOUNT = 0.01;`.
 - If the component has no styles, use the file `Xxx.tsx`.
 - If the component has styles, use the files `Xxx/index.tsx` and `index.css`.
