@@ -22,5 +22,6 @@
 
 ### Styling
 
-- Component styles live beside the component as `index.css`;
-- One root selector per `index.css`, children nested short.
+- Component styles live beside the component as `index.css`.
+- One root selector per `index.css`.
+- Check nested selectors with `pnpm lint:css`.
