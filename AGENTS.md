@@ -1,4 +1,4 @@
-# pri_festa_workspace
+# {project name}
 
 project structure: `spec/00_structure.md`
 
