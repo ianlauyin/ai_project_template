@@ -8,7 +8,7 @@
 
 ## Backend (Rust + Axum)
 
-- Use functional programming. Do not use object-oriented programming.
+Use functional programming. Do not use object-oriented programming.
 
 ## Frontend (SolidJS + Typescript)
 

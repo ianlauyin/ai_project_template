@@ -17,18 +17,18 @@ Each spec has two files:
 
 - `business-logic.md` stays correct after a rewrite of the feature. `code-impl.md` does not stay correct.
 - If more than one package uses a term, define the term one time in `spec/shared/00_context.md`.
-- If only one package uses a term, define the term in the `00_context.md` of that package.
+- If only one package uses a term, define the term in `spec/<package>/00_context.md` of that package.
 - Other specs refer to the file that defines the term.
 
 ## Procedures
 
-- To add or write a spec, read `spec/writing-specs.md`.
+To add or write a spec, read `spec/writing-specs.md`.
 
 ## Specs
 
-Each package folder has a `00_context.md` file. This file contains the Vocab of the package, then the list of its specs.
+Each package folder has a `spec/<package>/00_context.md` file. This file contains the Vocab of the package, then the list of its specs.
 
-Before you make the first edit in a package, read its `00_context.md`. Do this for each package that the change touches.
+Before you make the first edit in a package, read `spec/<package>/00_context.md` of that package. Do this for each package that the change touches.
 
 | package                     | scope                                 |
 | --------------------------- | ------------------------------------- |
