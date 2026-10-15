@@ -14,6 +14,7 @@ Use functional programming. Do not use object-oriented programming.
 
 ### Components
 
+- It page should have a id selector
 - Put constants before the component. For example: `const MIN_TRANSFER_AMOUNT = 0.01;`.
 - If the component has no styles, use the file `Xxx.tsx`.
 - If the component has styles, use the files `Xxx/index.tsx` and `index.css`.
@@ -27,6 +28,6 @@ Use functional programming. Do not use object-oriented programming.
 
 ### Class Names
 
-- Each component gives its **outermost tag** a class name with the `g-` prefix.
+- Each component under src/component gives its **outermost tag** a class name with the `g-` prefix.
 - Modifier classes on that outermost tag also use the `g-` prefix.
 - If you override the internal parts of a different component, put the `g-` class of that component in the selector.
