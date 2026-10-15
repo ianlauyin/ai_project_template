@@ -16,7 +16,6 @@ Two files per spec
 | `code-impl.md`      | how the current code does it — Prototype, Layout, Persist, Do not                       | making the change                    |
 
 - `business-logic.md` survives a rewrite of the feature; `code-impl.md` does not.
-- When they disagree, the code is right and `code-impl.md` is stale — fix it in the same change.
 - A term used by more than one package is defined once, in `spec/shared/00_context.md`. A term used by one package stays in that package's `00_context.md`. Other specs link to that home.
 
 ## Procedures
@@ -31,6 +30,6 @@ Each package folder has a `00_context.md`: the package's Vocab, then its specs.
 
 Before the first edit in a package, read its `00_context.md` — one for every package the change touches.
 
-| package                        | scope                               |
-| ------------------------------ | ----------------------------------- |
-| `spec/shared/00_context.md`    | terms used by more than one package |
+| package                     | scope                               |
+| --------------------------- | ----------------------------------- |
+| `spec/shared/00_context.md` | terms used by more than one package |
