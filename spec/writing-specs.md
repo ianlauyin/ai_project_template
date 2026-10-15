@@ -10,7 +10,7 @@ Where a spec goes and its two files: `spec/00_structure.md`.
 
 ## Writing
 
-- Simple, precise wording. Short sentences, one point each. Cut words that add nothing.
+- follow ASD-STE100.
 - Use a list when naming several items or making several points. Keep prose for a single point.
 - Use a table when every item has the same few fields.
 - Write in English. Traditional Chinese is for user-facing strings quoted verbatim.
