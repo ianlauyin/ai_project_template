@@ -4,9 +4,6 @@
 
 - Prioritize readability over strict DRY. Simple logic repeated across only is fine as-is — do not wrap it in a shared helper,
   generic type, or new abstraction just to remove that duplication.
-- Do not encapsulate what has one caller. A helper function, wrapper component, hook, base class, generic
-  type, or options object that exists to serve a single call site adds a hop without removing anything —
-  leave the code inline so it reads straight through.
 
 ## Backend (Rust + Axum)
 
@@ -25,3 +22,9 @@
 - Component styles live beside the component as `index.css`.
 - One root selector per `index.css`.
 - Check nested selectors with `pnpm lint:css`.
+
+### Class Names
+
+- Every component names its **outermost tag** with a `g-` prefix.
+- Modifier classes that land on that same outermost tag keep the prefix.
+- Overriding another component's internals must be qualified with that component's `g-` class.
