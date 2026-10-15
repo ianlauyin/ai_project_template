@@ -1,9 +1,11 @@
 # Git Convention
 
-- Pull with rebase: `git pull --rebase`. Integrate by rebasing, never with a merge commit.
-- Never force push — no `--force`, no `--force-with-lease`. Once pushed, commits are final; do not squash,
-  amend, or rebase them.
+- To pull, use rebase: `git pull --rebase`.
+- To integrate changes, use rebase. Do not make a merge commit.
+- Do not force push. Do not use `--force` or `--force-with-lease`.
+- After you push a commit, do not change it. Do not squash, amend, or rebase a pushed commit.
 
 ## Git Commits
 
-- One line, `scope: subject`. A body is rare — add one only when the subject genuinely cannot carry the change.
+- Write the commit message on one line, in the format `scope: subject`.
+- Usually, do not add a body. Add a body only if the subject cannot fully describe the change.

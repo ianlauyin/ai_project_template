@@ -1,35 +1,35 @@
 # Spec
 
-Key design decisions, behaviour, and requirements. Implementation details stay in the code — a spec links to the source instead of restating it.
+A spec records the key design decisions, the behaviour, and the requirements. Implementation details stay in the code. A spec refers to the source code. It does not repeat the source code.
 
-One folder per spec. The spec tree mirrors the package paths.
+Each spec has one folder. The spec tree has the same structure as the package paths.
 
-- Place a spec by where the user sees the behaviour, not where the code lives.
-- A flow on both apps gets one spec per app, under the same `NN_kebab-name/` in each. Each describes only its own app and links to its counterpart.
-- `spec/shared/` holds rules with no UI of their own.
+- Put a spec where the user sees the behaviour. Do not put it where the code is.
+- If a flow occurs in two apps, write one spec for each app. Use the same `NN_kebab-name/` folder name in each app. Each spec gives only the data for its app. Each spec refers to the spec for the other app.
+- `spec/shared/` contains rules that have no UI.
 
-Two files per spec
+Each spec has two files:
 
-| file                | holds                                                                                   | read it when                         |
-| ------------------- | --------------------------------------------------------------------------------------- | ------------------------------------ |
-| `business-logic.md` | what the feature does and the rules it must obey — user-visible behaviour, the contract | deciding whether a change is allowed |
-| `code-impl.md`      | how the current code does it — Prototype, Layout, Persist, Do not                       | making the change                    |
+| file                | contains                                                                                    | read it when                        |
+| ------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------- |
+| `business-logic.md` | what the feature does and the rules that it must obey: user-visible behaviour, the contract | you decide if a change is permitted |
+| `code-impl.md`      | how the current code does it: Prototype, Layout, Persist, Do not                            | you make the change                 |
 
-- `business-logic.md` survives a rewrite of the feature; `code-impl.md` does not.
-- A term used by more than one package is defined once, in `spec/shared/00_context.md`. A term used by one package stays in that package's `00_context.md`. Other specs link to that home.
+- `business-logic.md` stays correct after a rewrite of the feature. `code-impl.md` does not stay correct.
+- If more than one package uses a term, define the term one time in `spec/shared/00_context.md`.
+- If only one package uses a term, define the term in the `00_context.md` of that package.
+- Other specs refer to the file that defines the term.
 
 ## Procedures
 
-- Add or write a spec: `spec/writing-specs.md`.
-- Dev and production database: `spec/db.md`.
-- Prod deployment: `spec/deployment.md`.
+- To add or write a spec, read `spec/writing-specs.md`.
 
 ## Specs
 
-Each package folder has a `00_context.md`: the package's Vocab, then its specs.
+Each package folder has a `00_context.md` file. This file contains the Vocab of the package, then the list of its specs.
 
-Before the first edit in a package, read its `00_context.md` — one for every package the change touches.
+Before you make the first edit in a package, read its `00_context.md`. Do this for each package that the change touches.
 
-| package                     | scope                               |
-| --------------------------- | ----------------------------------- |
-| `spec/shared/00_context.md` | terms used by more than one package |
+| package                     | scope                                 |
+| --------------------------- | ------------------------------------- |
+| `spec/shared/00_context.md` | terms that more than one package uses |

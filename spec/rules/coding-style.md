@@ -1,30 +1,32 @@
 # Coding style
 
-## Duplication / Readability
+## Duplication and readability
 
-- Prioritize readability over strict DRY. Simple logic repeated across only is fine as-is — do not wrap it in a shared helper,
-  generic type, or new abstraction just to remove that duplication.
+- Readability is more important than strict DRY.
+- If simple logic occurs in only a small number of locations, keep it as it is.
+- Do not move duplicated logic into a shared helper, a generic type, or a new abstraction only to remove the duplication.
 
 ## Backend (Rust + Axum)
 
-- prefer functional programming over object oriented programming
+- Use functional programming. Do not use object-oriented programming.
 
 ## Frontend (SolidJS + Typescript)
 
 ### Components
 
-- Put constants before the component, for example `const MIN_TRANSFER_AMOUNT = 0.01;`.
-- File shape either way: `Xxx.tsx` when the component has no styles of its own, `Xxx/index.tsx` +
-  `index.css` when it does, with images in an `asset/` folder beside it.
+- Put constants before the component. For example: `const MIN_TRANSFER_AMOUNT = 0.01;`.
+- If the component has no styles, use the file `Xxx.tsx`.
+- If the component has styles, use the files `Xxx/index.tsx` and `index.css`.
+- Put images for the component in an `asset/` folder next to the component.
 
 ### Styling
 
-- Component styles live beside the component as `index.css`.
-- One root selector per `index.css`.
-- Check nested selectors with `pnpm lint:css`.
+- Put the component styles in an `index.css` file next to the component.
+- Each `index.css` file has only one root selector.
+- To examine nested selectors, run `pnpm lint:css`.
 
 ### Class Names
 
-- Every component names its **outermost tag** with a `g-` prefix.
-- Modifier classes that land on that same outermost tag keep the prefix.
-- Overriding another component's internals must be qualified with that component's `g-` class.
+- Each component gives its **outermost tag** a class name with the `g-` prefix.
+- Modifier classes on that outermost tag also use the `g-` prefix.
+- If you override the internal parts of a different component, put the `g-` class of that component in the selector.

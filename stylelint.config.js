@@ -1,5 +1,5 @@
 const selectorNestedPattern =
-  /^(?:[>+~]\s*\S[\s\S]*|&(?:\S[\s\S]*|\s*[>+~]\s*\S[\s\S]*))$/;
+  /^(?:[>+~]\s*\S[\s\S]*|&(?!:where\(\s*&\s*\))(?:\S[\s\S]*|\s*[>+~]\s*\S[\s\S]*))$/;
 
 /** @type {import('stylelint').Config} */
 export default {

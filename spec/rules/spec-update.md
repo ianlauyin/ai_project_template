@@ -1,15 +1,20 @@
 # Spec update
 
-A code change updates the spec that covers it, in the same change. A stale spec is a bug.
+When you change the code, update the spec for that code in the same change. A spec that is not up to date is a bug.
 
-`code-impl.md` — update it whenever the change touches anything it describes.
+Update `code-impl.md` when the change touches an item that `code-impl.md` describes.
 
-`business-logic.md` — update it when user-visible behaviour, a domain rule, or the wire contract changed.
-If the code now breaks a rule there and the task did not ask to change that rule, stop and ask — the code
-may be the thing that is wrong.
+Update `business-logic.md` when the change affects user-visible behaviour, a domain rule, or the wire contract.
 
-If no spec covers the changed flow, say so in the report. Do not create one unless asked (`skills/write-spec.md`).
+If the code does not obey a rule in `business-logic.md`, and the task did not tell you to change that rule, stop and ask. The code can be incorrect.
 
-In the report, list the spec files updated, or say why none needed it.
+If no spec describes the changed flow, write this in the report. Do not make a new spec unless the user tells you to (`skills/write-spec.md`).
 
-Skip only for changes no spec could describe: formatting, lint fixes, comments, dependency bumps.
+In the report, write the list of the spec files that you updated. If you did not update a spec, write the reason.
+
+Do not update a spec only for these changes:
+
+- Formatting
+- Lint fixes
+- Comments
+- Dependency version updates

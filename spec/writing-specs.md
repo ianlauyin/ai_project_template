@@ -1,25 +1,31 @@
 # Writing specs
 
-Where a spec goes and its two files: `spec/00_structure.md`.
+For the location of a spec and its two files, read `spec/00_structure.md`.
 
-## Adding one
+## Add a spec
 
-- `NN_kebab-name/`, `NN` continuing that package folder's sequence.
-- Write `business-logic.md` first. If a fact only holds until someone refactors, it belongs in `code-impl.md`.
-- Add a row to that folder's `00_context.md` under `## Specs`. Create the section with the package's first spec.
+- Make a folder with the name `NN_kebab-name/`. `NN` is the next number in the sequence of that package folder.
+- Write `business-logic.md` first.
+- If a fact can change when the code is refactored, put that fact in `code-impl.md`.
+- Add a row to the `## Specs` section of the `00_context.md` in that folder.
+- If the package has no specs, make the `## Specs` section when you add the first spec.
 
-## Writing
+## Write a spec
 
-Spec text must follow ASD-STE100 (Simplified Technical English).
+Write all spec text in ASD-STE100 (Simplified Technical English).
 
-- Use a list when naming several items or making several points. Keep prose for a single point.
-- Use a table when every item has the same few fields.
-- Write in English. Traditional Chinese is for user-facing strings quoted verbatim.
+- If you give several items or several points, use a list.
+- If you give only one point, use a paragraph.
+- If all items have the same small set of fields, use a table.
+- Write in English. Use Traditional Chinese only when you quote a user-facing string exactly.
 
-## Referencing spec/shared/
+## Refer to spec/shared/
 
-A rule in `spec/shared/` holds for every app. Name that path rather than restating it.
-Before writing a rule, check `spec/shared/` for it.
-When a spec names another markdown file, write the full path from the repo root, such as `spec/shared/00_context.md`.
-Never write a bare filename.
-Do not add a `[label](path)` link.
+A rule in `spec/shared/` applies to all apps. Write the path to that rule. Do not write the rule again.
+
+Before you write a rule, make sure that `spec/shared/` does not already contain it.
+
+When a spec refers to a different markdown file, write the full path from the repo root. For example: `spec/shared/00_context.md`.
+
+- Do not write only the filename.
+- Do not add a `[label](path)` link.
