@@ -22,5 +22,8 @@
 
 ### Styling
 
-- Component styles live beside the component as `index.css`;
+- Component styles live beside the component as `index.css`.
 - One root selector per `index.css`, children nested short.
+- A nested selector must use an explicit combinator (`>`, `+`, or `~`) or an attached
+  `&` form (`&:hover`, `&.mod`). No bare nests and no `& ` descendants.
+- Soft gate: `pnpm lint:css`. The pattern lives in `stylelint.config.js`.
