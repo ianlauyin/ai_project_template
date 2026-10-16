@@ -14,11 +14,12 @@ Use functional programming. Do not use object-oriented programming.
 
 ### Components
 
-- It page should have a id selector
-- Each Page component outermost tag class should have format: {page}-{component}-{subcomponent}-...
+- Each page has an id selector.
+- The outermost tag of each page component and subcomponent has a class name in the format `{page}-{component}-{sub-component}-...`.
+- Each single used sub-component live inside component folder.
 - Put constants before the component. For example: `const MIN_TRANSFER_AMOUNT = 0.01;`.
 - If the component has no styles, use the file `Xxx.tsx`.
-- If the component has styles, use the files `Xxx/index.tsx` and `index.css`.
+- If the component has styles, use the files `Xxx/index.tsx` and `Xxx/index.css`.
 - Put images for the component in an `asset/` folder next to the component.
 
 ### Styling
